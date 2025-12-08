@@ -10,39 +10,43 @@
             <!-- line + block comments -->
             <Keywords name="Comments">00// 01/* 02*/</Keywords>
             <Keywords name="Operators1">
-                     + - * / = == != &lt;= &gt;= && || -&gt;
+                      + - * / % = == === != !== &lt; &lt;= &gt;= &gt; && || ?? ? ! ... ~= -&gt;
             </Keywords>
             <!-- ALL Swift keywords in ONE group so static + var etc. all color -->
             <Keywords name="Keywords1">
                 class struct enum protocol extension actor
                 func init deinit subscript
-                if else guard let var in
-                for while repeat do switch case default where
+                if else guard let var in as is
+                while for repeat do switch case default where
                 break continue fallthrough
                 return throw throws rethrows try catch
-                import as is
+                import as #file #line #column #function
                 public internal private fileprivate open
                 static mutating nonmutating override final convenience required
                 associatedtype typealias
                 true false nil
-                async await
+                async await          
             </Keywords>
 
             <!-- keep these empty for now -->
             <Keywords name="Keywords2">
-                      @escaping @objc @MainActor @Sendable @available @IBAction @IBOutlet
-                      @Published @ObservedObject @State @StateObject @Environment @EnvironmentObject
-                      #available #if #else #elseif #endif #selector
+                     @escaping @autoclosure @discardableResult @objc @objcMembers @MainActor @Sendable
+                     @IBOutlet @IBAction @UIApplicationMain @State @Binding @Published @Environment
+                     #available #if #endif #else #elseif #warning #error #selector #keyPath
             </Keywords>
             <Keywords name="Keywords3">
-                         UIColor Void
-                         Int Int8 Int16 Int32 Int64
-                         UInt UInt8 UInt16 UInt32 UInt64
-                         Float Double CGFloat
-                         String Character Bool
-                         UIColorPickerViewController
+                         Void Never Any AnyObject
+                         Bool Int Int8 Int16 Int32 Int64 UInt UInt8 UInt16 UInt32 UInt64
+                         Float Double CGFloat Decimal
+                         String Character
+                         Array Dictionary Set Optional
+                         UIColor UIColorSpace UIFont UIImage UIView UIViewController
+                         SwiftUI.Color SwiftUI.View SwiftUI.State
+                         Bundle Date URL Data Error
             </Keywords>
-            <Keywords name="Keywords4"></Keywords>
+            <Keywords name="Keywords4">@State @Binding @ObservedObject @EnvironmentObject @Published
+                      weak unowned nonisolated
+            </Keywords>
 
             <!-- delimiters / strings -->
             <Keywords name="Delimiters">
