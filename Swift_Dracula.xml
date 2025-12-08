@@ -27,7 +27,12 @@
             </Keywords>
 
             <!-- keep these empty for now -->
-            <Keywords name="Keywords2"></Keywords>
+            <Keywords name="Keywords2">
+                      @escaping @objc @MainActor @Sendable @available @IBAction @IBOutlet
+                      @Published @ObservedObject @State @StateObject @Environment @EnvironmentObject
+                      #available #if #else #elseif #endif #selector
+            </Keywords>
+         
             <Keywords name="Keywords3"></Keywords>
             <Keywords name="Keywords4"></Keywords>
 
