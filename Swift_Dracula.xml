@@ -9,7 +9,9 @@
         <KeywordLists>
             <!-- line + block comments -->
             <Keywords name="Comments">00// 01/* 02*/</Keywords>
-
+            <Keywords name="Operators1">
+                     + - * / = == != &lt;= &gt;= && || -&gt;
+            </Keywords>
             <!-- ALL Swift keywords in ONE group so static + var etc. all color -->
             <Keywords name="Keywords1">
                 class struct enum protocol extension actor
@@ -32,8 +34,14 @@
                       @Published @ObservedObject @State @StateObject @Environment @EnvironmentObject
                       #available #if #else #elseif #endif #selector
             </Keywords>
-         
-            <Keywords name="Keywords3"></Keywords>
+            <Keywords name="Keywords3">
+                         UIColor Void
+                         Int Int8 Int16 Int32 Int64
+                         UInt UInt8 UInt16 UInt32 UInt64
+                         Float Double CGFloat
+                         String Character Bool
+                         UIColorPickerViewController
+            </Keywords>
             <Keywords name="Keywords4"></Keywords>
 
             <!-- delimiters / strings -->
