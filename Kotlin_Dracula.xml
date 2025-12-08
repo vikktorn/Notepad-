@@ -1,0 +1,148 @@
+<NotepadPlus>
+    <UserLang name="Kotlin_Darcula" ext="kt kts" udlVersion="2.1">
+        <Settings>
+            <Global caseIgnored="no" allowFoldOfComments="yes" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
+            <!-- no prefix based matching, exact words only -->
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+        </Settings>
+
+        <KeywordLists>
+            <!-- line + block comments -->
+            <Keywords name="Comments">00// 01/* 02*/</Keywords>
+
+            <!-- numbers -->
+            <Keywords name="Numbers, prefix1">0x 0b</Keywords>
+            <Keywords name="Numbers, prefix2"></Keywords>
+            <Keywords name="Numbers, extras1"></Keywords>
+            <Keywords name="Numbers, extras2"></Keywords>
+            <Keywords name="Numbers, suffix1">f F L</Keywords>
+            <Keywords name="Numbers, suffix2"></Keywords>
+            <Keywords name="Numbers, range"></Keywords>
+
+            <!-- operators (+ Android Studio-like set, including ?., ?:, !!, ::, ->) -->
+            <Keywords name="Operators1">
+                ++ -- ? ?. !! .. ?: :: -&gt;
+                + - * / % = == === != !==
+                &lt; &lt;= &gt;= &gt;
+                &amp;&amp; || += -= *= /= %=
+            </Keywords>
+            <Keywords name="Operators2"></Keywords>
+
+            <!-- code folding by braces -->
+            <Keywords name="Folders in code1, open">{</Keywords>
+            <Keywords name="Folders in code1, middle"></Keywords>
+            <Keywords name="Folders in code1, close">}</Keywords>
+            <Keywords name="Folders in code2, open"></Keywords>
+            <Keywords name="Folders in code2, middle"></Keywords>
+            <Keywords name="Folders in code2, close"></Keywords>
+            <Keywords name="Folders in comment, open"></Keywords>
+            <Keywords name="Folders in comment, middle"></Keywords>
+            <Keywords name="Folders in comment, close"></Keywords>
+
+            <!-- CORE KOTLIN KEYWORDS (orange) -->
+            <Keywords name="Keywords1">
+                package import typealias
+                class interface object
+                fun val var get set
+                this super
+                if else when
+                try catch finally throw
+                do while for
+                in !in is !is
+                true false null
+                break continue return
+                as !as
+                public private protected internal
+                abstract open final sealed data inner enum annotation
+                companion override
+                lateinit const
+                inline noinline crossinline
+                vararg
+                out in
+                suspend
+                external
+                expect actual
+            </Keywords>
+
+            <!-- ANNOTATIONS / DSL MARKERS (pink – similar to Swift_Darcula Keywords2) -->
+            <Keywords name="Keywords2">
+                @file @JvmStatic @JvmOverloads @JvmField @JvmName @Throws
+                @Deprecated @Suppress @SinceKotlin
+                @Composable @Preview
+                @Immutable @Stable @ReadOnlyComposable
+            </Keywords>
+
+            <!-- TYPES / COMMON CLASSES (purple – like Android Studio types) -->
+            <Keywords name="Keywords3">
+                Unit Nothing Any
+                Boolean BooleanArray
+                Byte Short Int Long
+                UByte UShort UInt ULong
+                Float Double
+                Char CharArray
+                String StringBuilder
+                List MutableList
+                Set MutableSet
+                Map MutableMap
+                Pair Triple
+                Array IntArray LongArray FloatArray DoubleArray
+                Iterable Sequence
+                Result
+                Throwable Exception RuntimeException IllegalArgumentException
+                Color Modifier
+                Column Row Box LazyColumn LazyRow
+            </Keywords>
+
+            <!-- spare groups if you want more later -->
+            <Keywords name="Keywords4"></Keywords>
+            <Keywords name="Keywords5"></Keywords>
+            <Keywords name="Keywords6"></Keywords>
+            <Keywords name="Keywords7"></Keywords>
+            <Keywords name="Keywords8"></Keywords>
+
+            <!-- STRINGS: 00 = open " , 01 = close " , 02 = escape \ -->
+            <Keywords name="Delimiters">00&quot; 01&quot; 02\\</Keywords>
+        </KeywordLists>
+
+        <Styles>
+            <!-- base text -->
+            <WordsStyle name="DEFAULT"       fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+
+            <!-- comments -->
+            <WordsStyle name="COMMENTS"      fgColor="808080" bgColor="2B2B2B" fontName="Consolas" fontStyle="2" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="808080" bgColor="2B2B2B" fontName="Consolas" fontStyle="2" nesting="0" />
+
+            <!-- numbers -->
+            <WordsStyle name="NUMBERS"       fgColor="6897BB" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+
+            <!-- keywords -->
+            <WordsStyle name="KEYWORDS1"     fgColor="CC7832" bgColor="2B2B2B" fontName="Consolas" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS2"     fgColor="FF79C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS3"     fgColor="9876AA" bgColor="2B2B2B" fontName="Consolas" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS4"     fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS5"     fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS6"     fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS7"     fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS8"     fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+
+            <!-- operators -->
+            <WordsStyle name="OPERATORS"     fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+
+            <!-- folding -->
+            <WordsStyle name="FOLDER IN CODE1"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE2"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN COMMENT" fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+
+            <!-- strings (Delimiters1) – green like Android Studio -->
+            <WordsStyle name="DELIMITERS1"   fgColor="6A8759" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <!-- other delimiter groups unused -->
+            <WordsStyle name="DELIMITERS2"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS6"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS7"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS8"   fgColor="A9B7C6" bgColor="2B2B2B" fontName="Consolas" fontStyle="0" nesting="0" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>
