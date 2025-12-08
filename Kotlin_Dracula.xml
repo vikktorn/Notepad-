@@ -41,55 +41,95 @@
             <!-- core Kotlin keywords (orange) -->
             <Keywords name="Keywords1">
                 package import typealias
-                class interface object
-                fun val var get set
-                this super
-                if else when
-                try catch finally throw
-                do while for
-                in !in is !is
-                true false null
-                break continue return
-                as !as
-                public private protected internal
-                abstract open final sealed data inner enum annotation
-                companion override
-                lateinit const
-                inline noinline crossinline
-                vararg
-                out in
-                suspend
-                external
-                expect actual
+class interface object enum annotation
+data sealed open abstract final inner
+companion override
+constructor init
+this super
+fun val var get set field
+by where
+if else when
+for while do
+try catch finally throw
+return break continue
+in !in is !is as as?
+true false null
+public private protected internal
+lateinit const
+inline noinline crossinline
+vararg
+out
+suspend
+external
+tailrec infix operator
+expect actual
             </Keywords>
 
             <!-- annotations (pink) -->
             <Keywords name="Keywords2">
-                @file @JvmStatic @JvmOverloads @JvmField @JvmName @Throws
-                @Deprecated @Suppress @SinceKotlin
-                @Composable @Preview
-                @Immutable @Stable @ReadOnlyComposable
+                Composable Preview
+                Deprecated Suppress SinceKotlin
+                JvmStatic JvmOverloads JvmField JvmName
+                Throws Volatile Synchronized Strictfp Transient
+                Target Retention MustBeDocumented Repeatable
+                file Param ArrayVararg
+                Immutable Stable ReadOnlyComposable
+                Test Before After BeforeClass AfterClass Ignore
             </Keywords>
 
             <!-- common types (purple) -->
             <Keywords name="Keywords3">
-                Unit Nothing Any
-                Boolean BooleanArray
-                Byte Short Int Long
-                UByte UShort UInt ULong
-                Float Double
-                Char CharArray
-                String StringBuilder
-                List MutableList
-                Set MutableSet
-                Map MutableMap
-                Pair Triple
-                Array IntArray LongArray FloatArray DoubleArray
-                Iterable Sequence
-                Result
-                Throwable Exception RuntimeException IllegalArgumentException
-                Color Modifier
-                Column Row Box LazyColumn LazyRow
+               Unit Nothing Any
+               Boolean BooleanArray
+               Byte Short Int Long
+               UByte UShort UInt ULong
+               Float Double
+               Char CharArray
+               String StringBuilder 
+
+               List MutableList
+               Set MutableSet
+               Map MutableMap
+               Collection MutableCollection
+               Iterable Sequence
+               Array IntArray LongArray FloatArray DoubleArray 
+               Pair Triple
+               Result
+
+              Throwable Exception RuntimeException
+              IllegalArgumentException IllegalStateException
+              IndexOutOfBoundsException NullPointerException
+              NoSuchElementException UnsupportedOperationException
+
+Regex MatchResult
+File InputStream OutputStream
+ByteArrayInputStream ByteArrayOutputStream
+
+CoroutineScope Deferred Job
+Flow StateFlow SharedFlow
+Channel Mutex
+
+Color Brush Modifier
+Text Image Icon Icons
+Scaffold Surface Card
+Button OutlinedButton IconButton
+FloatingActionButton
+TopAppBar BottomAppBar
+NavigationBar NavigationRail
+Snackbar AlertDialog
+
+Column Row Box
+LazyColumn LazyRow
+LazyVerticalGrid LazyHorizontalGrid
+
+MaterialTheme Typography Shapes
+remember rememberSaveable
+mutableStateOf derivedStateOf
+State MutableState SnapshotStateList SnapshotStateMap
+
+Context Activity Fragment View ViewGroup
+Intent Bundle Drawable Bitmap
+LiveData MutableLiveData ViewModel
             </Keywords>
 
             <Keywords name="Keywords4"></Keywords>
