@@ -26,10 +26,8 @@ val graphSurface01 = Color(...)
 public static let graphSurface01 = Color(...)
 
 
-Keep only the name:
-
-Find what:
-^.*\b(?:val|var|let|static\s+let)\s+([A-Za-z_][A-Za-z0-9_]*).*$
+Keep only 
+^\s*static\s+(?:var|let)\s+([A-Za-z_][A-Za-z0-9_]*)[:\s=]
 
 Replace with:
 \1
