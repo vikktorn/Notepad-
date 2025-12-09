@@ -40,7 +40,7 @@ Step A — Remove Non-Name Lines
 
 Find what:
 ```regex
-^\s*([A-Za-z_][A-Za-z0-9_]*)\s*[:=]
+^\s*([A-Za-z_][A-Za-z0-9_]*)\s+Color\b
 ```
 
 Replace with:
