@@ -36,7 +36,7 @@ Click: Replace All
 
 Remove everything except clean names.
 
-Step A — Remove Non-Name Lines
+### Step A — Remove Non-Name Lines
 
 Find what:
 ```regex
@@ -50,7 +50,21 @@ Replace with:
 
 Replace All.
 
-Step B — Remove Empty Lines
+### Step B - Remove everything after name
+
+Find what:
+```regex
+^([A-Za-z_][A-Za-z0-9_]*)\b.*$
+```
+
+Replace with:
+```regex
+\1
+```
+
+Replace all.
+
+### Step C — Remove Empty Lines
 
 Find what:
 ```regex 
