@@ -83,3 +83,14 @@ if __name__ == "__main__":
 =IFERROR(INDEX(Kotlin!$A$2:$A$500; MATCH(A2; Kotlin!$A$2:$A$500; 0)); "")
 
 =IFERROR(VLOOKUP(A2; Kotlin!$A:$A; 1; FALSE); "")
+ 
+ 
+  =IF(B4<>"", "MATCH", "IOS_ONLY")
+
+=IFERROR(INDEX(Swift!$A:$A, MATCH(E3, Swift!$A:$A, 0)), "")
+
+=IF(F3<>"", "MATCH", "KOTLIN_ONLY")
+
+
+
+
