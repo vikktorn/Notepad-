@@ -37,9 +37,9 @@ Remove everything except clean names.
 Step A — Remove Non-Name Lines
 
 Find what:
-'''regex
+```regex
 ^(?![A-Za-z_][A-Za-z0-9_]*$).*
-'''
+```
 
 Replace with:
 (leave empty)
