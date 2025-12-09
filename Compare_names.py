@@ -81,3 +81,5 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 =IFERROR(INDEX(Kotlin!$A$2:$A$500; MATCH(A2; Kotlin!$A$2:$A$500; 0)); "")
+
+=IFERROR(VLOOKUP(A2; Kotlin!$A:$A; 1; FALSE); "")
