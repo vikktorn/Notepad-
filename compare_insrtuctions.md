@@ -16,11 +16,13 @@ We want to extract only the variable names.
 Open: Search → Replace…
 
 Find what:
+```regex
 ^\s*static\s+(?:var|let)\s+([A-Za-z_][A-Za-z0-9_]*)[:\s=]
-
+```
 Replace with:
+```regex 
 \1
-
+```
 Settings:
 Search mode: Regular expression
 Wrap around: Yes
@@ -49,8 +51,9 @@ Replace All.
 Step B — Remove Empty Lines
 
 Find what:
+```regex 
 ^\s*$
-
+```
 Replace with:
 (leave empty)
 
@@ -73,11 +76,13 @@ Extract the identifier before '='.
 Open: Search → Replace…
 
 Find what:
+```regex 
 ^\s*val\s+([A-Za-z_][A-Za-z0-9_]*)\s*=
-
+```
 Replace with:
+```regex 
 \1
-
+```
 Settings:
 Search mode: Regular expression
 Wrap around: Yes
@@ -92,8 +97,9 @@ Click: Replace All
 Step A — Remove Non-Name Lines
 
 Find what:
+```regex
 ^(?![A-Za-z_][A-Za-z0-9_]*$).*
-
+```
 Replace with:
 (leave empty)
 
@@ -102,8 +108,9 @@ Replace All.
 Step B — Remove Empty Lines
 
 Find what:
+```regex 
 ^\s*$
-
+```
 Replace with:
 (leave empty)
 
