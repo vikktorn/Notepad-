@@ -107,7 +107,7 @@ Open: Search → Replace…
 
 Find what:
 ```regex 
-^\s*val\s+([A-Za-z_][A-Za-z0-9_]*)\s*=
+^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=
 ```
 Replace with:
 ```regex 
