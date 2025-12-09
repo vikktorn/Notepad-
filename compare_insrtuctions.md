@@ -64,7 +64,21 @@ Replace with:
 
 Replace all.
 
-### Step C — Remove Empty Lines
+### Step C - Remove all Non-Name Lines
+
+Find what:
+```regex
+^(?!\s*[A-Za-z_][A-Za-z0-9_]*\s*$).+
+```
+
+Replace with:
+(Leave empty)
+
+
+Replace All
+
+
+### Step D — Remove Empty Lines
 
 Find what:
 ```regex 
