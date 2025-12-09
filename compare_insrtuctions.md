@@ -127,7 +127,7 @@ Click: Replace All
 
 Find what:
 ```regex
-^\s*([A-Za-z_][A-Za-z0-9_]*)\s+Color\(
+^\s*([A-Za-z_][A-Za-z0-9_]*)\s+Color\(.*$
 ```
 
 Replace with:
