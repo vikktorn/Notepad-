@@ -40,11 +40,13 @@ Step A — Remove Non-Name Lines
 
 Find what:
 ```regex
-^(?![A-Za-z_][A-Za-z0-9_]*$).*
+^\s*([A-Za-z_][A-Za-z0-9_]*)\s*[:=]
 ```
 
 Replace with:
-(leave empty)
+```regex
+\1
+```
 
 Replace All.
 
