@@ -60,10 +60,8 @@ Do this ONCE and save as e.g. ExtractNames:
 
 4. Open Search → Replace…
 
-Search mode: Regular expression
-
-Find what:
-^.*\b(?:val|var|let|static\s+let)\s+([A-Za-z_][A-Za-z0-9_]*).*$
+Search mode: Regular expression 
+^\s*static\s+(?:var|let)\s+([A-Za-z_][A-Za-z0-9_]*)[:\s=]
 
 Replace with:
 \1
