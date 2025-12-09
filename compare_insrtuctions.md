@@ -1,187 +1,133 @@
-1. For each file (Swift / Kotlin) you run a macro that:
+# Token Name Extraction & Comparison (Swift + Kotlin) in Notepad++
 
-extracts only variable names (val/var/let/static let ... =)
-
-deletes everything else
-
-sorts names alphabetically
-
-
-
-2. Then you use Compare on those two “name-only” tabs.
-
-
-
-So you compare naming only, not whole code.
-
+This guide explains how to extract token names from Swift and Kotlin files using Notepad++, clean them, sort them, and compare them using the Compare plugin.
 
 ---
 
-1. Regex we’ll use
+## 1. Extract Names From Swift File
 
-Works for both Swift + Kotlin token lines like:
+Swift lines look like:
 
-val graphSurface01 = Color(...)
+static var surfaceBackground: Color { ... }
+static let graphSurface01Static = color(name: "graphSurface01")
 
-public static let graphSurface01 = Color(...)
+We want to extract only the variable names.
 
+Open: Search → Replace…
 
-Keep only 
+Find what:
 ^\s*static\s+(?:var|let)\s+([A-Za-z_][A-Za-z0-9_]*)[:\s=]
 
 Replace with:
 \1
 
+Settings:
+Search mode: Regular expression
+Wrap around: Yes
+In selection: No
 
-Then delete all lines that are not “just a name”:
-
-Find what:
-^(?![A-Za-z_][A-Za-z0-9_]*$).*$
-
-Replace with:
-(empty)
-
-
+Click: Replace All
 
 ---
 
-2. Record the macro once
+## 2. Clean the Extracted Swift Output
 
-Do this ONCE and save as e.g. ExtractNames:
+Remove everything except clean names.
 
-1. Open one of your files (Swift or Kotlin).
-
-
-2. Macro → Start Recording
-
-
-3. Press Ctrl+A (select all).
-
-
-4. Open Search → Replace…
-
-Search mode: Regular expression 
-^\s*static\s+(?:var|let)\s+([A-Za-z_][A-Za-z0-9_]*)[:\s=]
-
-Replace with:
-\1
-
-Click Replace All
-
-Close dialog.
-
-
-
-5. Open Search → Replace… again
-
-Search mode: Regular expression
+Step A — Remove Non-Name Lines
 
 Find what:
-^(?![A-Za-z_][A-Za-z0-9_]*$).*$
+^(?![A-Za-z_][A-Za-z0-9_]*$).*
 
-Replace with: (leave empty)
+Replace with:
+(leave empty)
 
-Replace All
+Replace All.
 
-Close dialog.
+Step B — Remove Empty Lines
 
+Find what:
+^\s*$
 
+Replace with:
+(leave empty)
 
-6. Remove empty lines:
+Replace All.
 
-Search → Replace…
-
-Find what: ^\s*$
-
-Replace with: (empty)
-
-Search mode: Regular expression
-
-Replace All, close.
-
-
-
-7. Sort names:
+Step C — Sort Swift Names
 
 Edit → Line Operations → Sort Lines Lexicographically Ascending
 
+---
 
+## 3. Extract Names From Kotlin File
 
-8. Macro → Stop Recording
+Kotlin lines look like:
 
+val graphSurface01Static = Color(...)
 
-9. Macro → Save Current Recorded Macro…
+Extract the identifier before '='.
 
-Name: ExtractNames
+Open: Search → Replace…
 
-Give it a shortcut (e.g. Ctrl+Alt+E)
+Find what:
+^\s*val\s+([A-Za-z_][A-Za-z0-9_]*)\s*=
 
+Replace with:
+\1
 
+Settings:
+Search mode: Regular expression
+Wrap around: Yes
+In selection: No
 
-
-Now you have a macro that turns any Swift/Kotlin file into a sorted list of variable names.
-
+Click: Replace All
 
 ---
 
-3. Use it for comparison
+## 4. Clean the Extracted Kotlin Output
 
-For each side:
+Step A — Remove Non-Name Lines
 
-1. File → Open original:
+Find what:
+^(?![A-Za-z_][A-Za-z0-9_]*$).*
 
-Colors.swift
+Replace with:
+(leave empty)
 
+Replace All.
 
+Step B — Remove Empty Lines
 
-2. File → Save As… → Colors_names.txt (so you don’t destroy real file)
+Find what:
+^\s*$
 
+Replace with:
+(leave empty)
 
-3. Run macro: Macro → ExtractNames (or your shortcut).
+Replace All.
 
+Step C — Sort Kotlin Names
 
-
-Repeat for Kotlin file:
-
-1. Open ThemeColors.kt
-
-
-2. Save As ThemeColors_names.txt
-
-
-3. Run macro.
-
-
-
-Now you have:
-
-Colors_names.txt = sorted Swift names
-
-ThemeColors_names.txt = sorted Kotlin names
-
-
+Edit → Line Operations → Sort Lines Lexicographically Ascending
 
 ---
 
-4. Compare just the names
+## 5. Compare Swift vs Kotlin Names
 
-1. Open both *_names.txt files.
+Open both cleaned files:
 
+Swift_names.txt  
+Kotlin_names.txt
 
-2. Plugins → Compare → Compare
+Then run:
 
+Plugins → Compare → Compare
 
-
-Now Compare shows:
-
-green / red only where names differ
-
-missing names clearly visible
-
-no noise from types, generics, etc.
-
-
+This produces a clean, line-by-line naming diff without any code noise.
 
 ---
 
-If you send me 2–3 example lines from each file (Swift + Kotlin), I can tweak the regex to match your exact naming pattern (e.g. if you also have enum cases or nested objects).
+## Finished
+
+You now have a reproducible workflow to validate naming consistency between Swift and Kotlin token files using Notepad++.
