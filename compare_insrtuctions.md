@@ -105,6 +105,8 @@ Extract the identifier before '='.
 
 Open: Search → Replace…
 
+### Step A - Remove empty spaces before color name
+
 Find what:
 ```regex 
 ^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=
@@ -120,6 +122,28 @@ In selection: No
 
 Click: Replace All
 
+
+### Step B - Remove all after name
+
+Find what:
+```regex
+^\s*([A-Za-z_][A-Za-z0-9_]*)\s+Color\(
+```
+
+Replace with:
+```regex
+\1
+```
+
+### Step C Delete everything that is not name
+
+Find what:
+```regex
+^(?!\s*[A-Za-z_][A-Za-z0-9_]*\s*$).+
+```
+
+Replace with:
+(leave empty)
 ---
 
 ## 4. Clean the Extracted Kotlin Output
